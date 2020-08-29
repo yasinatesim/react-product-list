@@ -12,8 +12,8 @@ const PRODUCTS = gql`
   query {
     products {
       name
-      image,
-      price,
+      image
+      price
       url
       cargo {
         type
@@ -24,11 +24,7 @@ const PRODUCTS = gql`
 `;
 
 function ProductList() {
-  const {
-    loading,
-    error,
-    data,
-  } = useQuery(PRODUCTS);
+  const { loading, error, data } = useQuery(PRODUCTS);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
@@ -38,7 +34,14 @@ function ProductList() {
       <Row>
         {data.products.map(({ id, name, image, price, url, cargo }) => (
           <Column key={id}>
-            <ProductItem name={name} image={image} price={price} url={url} cargoType={cargo.type} cargoName={cargo.name} />
+            <ProductItem
+              name={name}
+              image={image}
+              price={price}
+              url={url}
+              cargoType={cargo.type}
+              cargoName={cargo.name}
+            />
           </Column>
         ))}
       </Row>

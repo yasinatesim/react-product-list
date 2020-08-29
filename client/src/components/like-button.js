@@ -63,7 +63,7 @@ const Button = styled.button`
 
 LikeButton.propTypes = {
   liked: PropTypes.bool,
-  inCard: PropTypes.bool
+  inCard: PropTypes.bool,
 };
 
 export default LikeButton;

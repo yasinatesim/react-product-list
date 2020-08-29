@@ -1,5 +1,3 @@
 import CargoIcon from './cargo';
 
-export {
-  CargoIcon
-};
+export { CargoIcon };

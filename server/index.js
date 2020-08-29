@@ -11,7 +11,7 @@ const typeDefs = gql`
     image: String!
     price: Float!
     url: String!
-    cargo: Cargo!,
+    cargo: Cargo!
   }
 
   type Cargo {
@@ -30,9 +30,9 @@ const resolvers = {
   },
   Product: {
     cargo: (parent) => {
-      return cargo.find(item => item.type === parent.cargo);
-    }
-  }
+      return cargo.find((item) => item.type === parent.cargo);
+    },
+  },
 };
 
 const server = new ApolloServer({ typeDefs, resolvers });

@@ -11,10 +11,9 @@ export const Container = styled.div`
 export const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 16px
+  gap: 16px;
 `;
 
 export const Column = styled.div`
   grid-column: span 3;
 `;
-

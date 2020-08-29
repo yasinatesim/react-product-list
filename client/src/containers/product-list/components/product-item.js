@@ -8,8 +8,7 @@ import { CargoIcon } from '../../../icons';
 // Components
 import LikeButton from '../../../components/like-button';
 
-
-function ProductItem({image,name, price, url, cargoType, cargoName}) {
+function ProductItem({ image, name, price, url, cargoType, cargoName }) {
   return (
     <Item href={url}>
       <LikeButton inCard />
@@ -26,6 +25,10 @@ function ProductItem({image,name, price, url, cargoType, cargoName}) {
   );
 }
 
+/**
+ * Styles
+ * ------------
+ */
 const Item = styled.a`
   border: 1px solid #d7dddb;
   border-radius: 4px;
@@ -43,7 +46,6 @@ const Title = styled.h3`
   margin-bottom: 12px;
   font-weight: 700;
   position: relative;
-
 `;
 
 const Price = styled.p`
