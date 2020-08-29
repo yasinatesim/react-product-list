@@ -1,0 +1,8 @@
+.prettierrc
+client/**/*.html
+client/public/*.json
+commitlint.config.js
+*/.eslintrc
+package.json
+*.md
+*.yaml
