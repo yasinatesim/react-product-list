@@ -2,11 +2,21 @@ const { ApolloServer, gql } = require('apollo-server');
 
 // Data
 const { products } = require('./src/data/products.json');
+const { cargo } = require('./src/data/cargo.json');
 
 const typeDefs = gql`
   type Product {
-    title: String
-    author: String
+    id: ID!
+    name: String!
+    image: String!
+    price: Float!
+    url: String!
+    cargo: Cargo!,
+  }
+
+  type Cargo {
+    type: Int!
+    name: String!
   }
 
   type Query {
@@ -18,6 +28,11 @@ const resolvers = {
   Query: {
     products: () => products,
   },
+  Product: {
+    cargo: (parent) => {
+      return cargo.find(item => item.type === parent.cargo);
+    }
+  }
 };
 
 const server = new ApolloServer({ typeDefs, resolvers });

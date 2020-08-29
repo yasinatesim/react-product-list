@@ -1,0 +1,16 @@
+{
+  "cargo": [
+    {
+      "type": 1,
+      "name": "Ücretsiz Kargo"
+    },
+    {
+      "type": 2,
+      "name": "Ücretsiz – Aynı Gün Kargo"
+    },
+    {
+      "type": 3,
+      "name": "Ücretli Kargo"
+    }
+  ]
+}
