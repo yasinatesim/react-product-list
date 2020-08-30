@@ -11,20 +11,28 @@ import { CargoIcon } from '../../../icons';
 import LikeButton from '../../../components/like-button';
 
 function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked }) {
+  const handleItemClick = (e) => {
+    e.preventDefault();
+
+    window.location.href = url;
+  };
+
   return (
     <Item>
       <LikeButton inCard liked={liked} productId={id} />
-      <img src={image} alt={name} />
-      <Bottom>
-        <Title>
-          <span>{name}</span>
-        </Title>
-        <Price>{priceFormat(price)}</Price>
-        <Cargo>
-          <Icon>{cargoType !== 3 && <CargoIcon width="24" fill="#3498db" />}</Icon>
-          <Text cargoType={cargoType}>{cargoName}</Text>
-        </Cargo>
-      </Bottom>
+      <Content href={url} onClick={(e) => handleItemClick(e)}>
+        <img src={image} alt={name} />
+        <Bottom>
+          <Title>
+            <span>{name}</span>
+          </Title>
+          <Price>{priceFormat(price)}</Price>
+          <Cargo>
+            <Icon>{cargoType !== 3 && <CargoIcon width="24" fill="#3498db" />}</Icon>
+            <Text cargoType={cargoType}>{cargoName}</Text>
+          </Cargo>
+        </Bottom>
+      </Content>
     </Item>
   );
 }
@@ -33,10 +41,14 @@ function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked 
  * Styles
  * ------------
  */
-const Item = styled.a`
+
+const Item = styled.div`
+  position: relative;
+`;
+
+const Content = styled.a`
   border: 1px solid #d7dddb;
   border-radius: 4px;
-  position: relative;
   display: inline-block;
 `;
 

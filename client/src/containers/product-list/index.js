@@ -10,11 +10,22 @@ import ProductContext from '../../context/product';
 import ProductItem from './components/product-item';
 
 function ProductList() {
-  const { products, likedProducts } = useContext(ProductContext);
-  const [showLikedProducts, setLikedProducts] = useState(false);
+  const { products, likedProducts, setProducts, setLikedProducts } = useContext(ProductContext);
+  const [showLikedProducts, setShowLikedProducts] = useState(false);
 
   const handleToggleLikedProducts = () => {
-    setLikedProducts(!showLikedProducts);
+    setShowLikedProducts(!showLikedProducts);
+
+    if (showLikedProducts) {
+      setLikedProducts([]);
+
+      const _products = JSON.parse(JSON.stringify(products));
+      for (let index = 0; index < _products.length; index += 1) {
+        const product = _products[index];
+        product.liked = false;
+      }
+      setProducts(_products);
+    }
   };
 
   const renderLikedProducts = () => {
@@ -34,9 +45,9 @@ function ProductList() {
     ));
   };
 
-
   const renderProducts = () => {
-    return products !== null ? products.map(({ id, name, image, price, url, cargo, liked }, index) => (
+    return products !== null
+      ? products.map(({ id, name, image, price, url, cargo, liked }, index) => (
           <Column key={id}>
             <ProductItem
               name={name}
@@ -61,7 +72,9 @@ function ProductList() {
       <br />
       <br />
       <br />
-      <button type="button" onClick={handleToggleLikedProducts}>Beğendiklerim</button>
+      <button type="button" onClick={handleToggleLikedProducts}>
+        Beğendiklerim
+      </button>
       <br />
       <br />
       <br />

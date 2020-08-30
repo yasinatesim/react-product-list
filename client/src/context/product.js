@@ -43,7 +43,7 @@ export const ProductProvider = ({ children }) => {
     setLikedProducts(newlikedProducts);
   };
 
-  const value = { products, toggleLike, likedProducts };
+  const value = { products, setProducts, toggleLike, likedProducts, setLikedProducts };
 
   return <ProductContext.Provider value={value}>{children}</ProductContext.Provider>;
 };
