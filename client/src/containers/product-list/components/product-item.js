@@ -22,7 +22,7 @@ function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked 
           </Title>
           <Price>{priceFormat(price)}</Price>
           <Cargo>
-            <Icon>{cargoType !== 3 && <CargoIcon width="24" fill="#3498db" />}</Icon>
+            <Icon>{cargoType !== 3 && <CargoIcon width="22" fill="#3498db" />}</Icon>
             <Text cargoType={cargoType}>{cargoName}</Text>
           </Cargo>
         </Bottom>
@@ -74,7 +74,8 @@ const Price = styled.p`
 
 const Icon = styled.span`
   min-height: 30px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 `;
 
 const Cargo = styled.div`
