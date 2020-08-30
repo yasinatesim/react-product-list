@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled, { css } from 'styled-components';
 
 // Utilities
@@ -11,10 +10,10 @@ import { CargoIcon } from '../../../icons';
 // Components
 import LikeButton from '../../../components/like-button';
 
-function ProductItem({ image, name, price, url, cargoType, cargoName }) {
+function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked }) {
   return (
-    <Item href={url}>
-      <LikeButton inCard />
+    <Item>
+      <LikeButton inCard liked={liked} productId={id} />
       <img src={image} alt={name} />
       <Bottom>
         <Title>
@@ -90,9 +89,9 @@ const Text = styled.span`
     css`
       margin-left: 0;
     `}
-    @media (min-width: 768px) and (max-width: 992px) {
-      margin-left: 0;
-    }
+  @media (min-width: 768px) and (max-width: 992px) {
+    margin-left: 0;
+  }
 `;
 
 export default ProductItem;

@@ -11,6 +11,7 @@ const typeDefs = gql`
     image: String!
     price: Float!
     url: String!
+    liked: Boolean!
     cargo: Cargo!
   }
 

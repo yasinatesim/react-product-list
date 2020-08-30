@@ -1,12 +1,12 @@
 Hem server hem client’ın unit testleri yazılmalı en az %70 test coverage sağlanmalı.
 
-Like ikonuna basıldığında ilgili ürünün status’u liked durumuna geçmeli ve kalp kırmızıya dönmeli, aksi durumda unliked olmalı ve gri kalp görünmeli)
-
 Like olan ürünlerin toplam sayısı gösterilmeli, unliked yapıldığında bu sayı değişmeli.
 
 Beğendiklerim alanına tıklandığında liked status’unda olan ürünler filtrelenmeli, tekrar tıklandığında filtre kaldırılmalı.
 
 ------------------------
+
+[x] Like ikonuna basıldığında ilgili ürünün status’u liked durumuna geçmeli ve kalp kırmızıya dönmeli, aksi durumda unliked olmalı ve gri kalp görünmeli)
 
 [x] Ürün başlığı maksimum 2 satır olabilir, eğer 2 satırdan fazlaysa … (üç nokta) ile kesilmeli.
 

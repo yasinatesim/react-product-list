@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useQuery, gql } from '@apollo/client';
 
@@ -12,6 +12,7 @@ const PRODUCTS = gql`
       image
       price
       url
+      liked
       cargo {
         type
         name
@@ -22,14 +23,27 @@ const PRODUCTS = gql`
 
 export const ProductProvider = ({ children }) => {
   const { loading, data } = useQuery(PRODUCTS);
+  const [products, setProducts] = useState(null);
 
-  return (
-    <ProductContext.Provider value={loading || !data.products ? null : data.products}>
-      {children}
-    </ProductContext.Provider>
-  );
+  useEffect(() => {
+    if (loading || !data.products) {
+      setProducts(null);
+    } else {
+      setProducts(data.products);
+    }
+  }, [data]);
+
+  const toggleLike = ({ productId }) => {
+    const _products = JSON.parse(JSON.stringify(products));
+    _products[productId].liked = !_products[productId].liked;
+
+    setProducts(_products);
+  };
+
+  const value = {products, toggleLike };
+
+  return <ProductContext.Provider value={value}>{children}</ProductContext.Provider>;
 };
-export const ProductConsumer = ProductContext.Consumer;
 export default ProductContext;
 
 ProductProvider.propTypes = {

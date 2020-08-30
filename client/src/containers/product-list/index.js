@@ -10,24 +10,27 @@ import ProductContext from '../../context/product';
 import ProductItem from './components/product-item';
 
 function ProductList() {
-  const products = useContext(ProductContext);
+  const { products } = useContext(ProductContext);
 
   return (
     <Container>
       <Row>
-        {products !==
-          null ? products.map(({ id, name, image, price, url, cargo }) => (
-            <Column key={id}>
-              <ProductItem
-                name={name}
-                image={image}
-                price={price}
-                url={url}
-                cargoType={cargo.type}
-                cargoName={cargo.name}
-              />
-            </Column>
-          )) : 'loading'}
+        {products !== null
+          ? products.map(({ id, name, image, price, url, cargo, liked }, index) => (
+              <Column key={id}>
+                <ProductItem
+                  name={name}
+                  image={image}
+                  price={price}
+                  url={url}
+                  cargoType={cargo.type}
+                  cargoName={cargo.name}
+                  liked={liked}
+                  id={index}
+                />
+              </Column>
+            ))
+          : 'loading'}
       </Row>
     </Container>
   );

@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-
 import styled, { css } from 'styled-components';
+
+// Context
+import ProductContext from '../context/product';
 
 // icons
 import { HeartIcon } from '../icons';
 
-function LikeButton({ liked, inCard }) {
+function LikeButton({ liked, inCard, productId }) {
+  const { toggleLike } = useContext(ProductContext);
+
   return (
-    <Button liked={liked} inCard={inCard}>
+    <Button onClick={() => toggleLike({ productId })} liked={liked} inCard={inCard}>
       <HeartIcon fill="#727e7c" />
     </Button>
   );
@@ -38,6 +42,7 @@ const Button = styled.button`
   ${({ liked }) =>
     liked &&
     css`
+      border-color: #3498db;
       svg {
         fill: #3498db;
       }
