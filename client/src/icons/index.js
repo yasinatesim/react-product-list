@@ -1,3 +1,4 @@
 import CargoIcon from './cargo';
+import HeartIcon from './heart';
 
-export { CargoIcon };
+export { CargoIcon, HeartIcon };

@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Poppins', sans-serif;
+    color: #53605e;
   }
 
   img {
