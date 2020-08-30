@@ -36,10 +36,12 @@ export const ProductProvider = ({ children }) => {
 
   const toggleLike = ({ productId }) => {
     const _products = JSON.parse(JSON.stringify(products));
-    _products[productId].liked = !_products[productId].liked;
+    const productIndex = _products.findIndex((product) => product.id === productId);
+    _products[productIndex].liked = !_products[productIndex].liked;
+
     setProducts(_products);
 
-    const newlikedProducts =_products.filter((product) => product.liked);
+    const newlikedProducts = _products.filter((product) => product.liked);
     setLikedProducts(newlikedProducts);
   };
 

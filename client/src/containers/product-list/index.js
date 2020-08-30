@@ -29,7 +29,7 @@ function ProductList() {
   };
 
   const renderLikedProducts = () => {
-    return likedProducts.map(({ id, name, image, price, url, cargo, liked }, index) => (
+    return likedProducts.map(({ id, name, image, price, url, cargo, liked }) => (
       <Column key={id}>
         <ProductItem
           name={name}
@@ -39,7 +39,7 @@ function ProductList() {
           cargoType={cargo.type}
           cargoName={cargo.name}
           liked={liked}
-          id={index}
+          id={id}
         />
       </Column>
     ));
@@ -47,7 +47,7 @@ function ProductList() {
 
   const renderProducts = () => {
     return products !== null
-      ? products.map(({ id, name, image, price, url, cargo, liked }, index) => (
+      ? products.map(({ id, name, image, price, url, cargo, liked }) => (
           <Column key={id}>
             <ProductItem
               name={name}
@@ -57,7 +57,7 @@ function ProductList() {
               cargoType={cargo.type}
               cargoName={cargo.name}
               liked={liked}
-              id={index}
+              id={id}
             />
           </Column>
         ))

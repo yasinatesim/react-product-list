@@ -11,16 +11,10 @@ import { CargoIcon } from '../../../icons';
 import LikeButton from '../../../components/like-button';
 
 function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked }) {
-  const handleItemClick = (e) => {
-    e.preventDefault();
-
-    window.location.href = url;
-  };
-
   return (
     <Item>
       <LikeButton inCard liked={liked} productId={id} />
-      <Content href={url} onClick={(e) => handleItemClick(e)}>
+      <Content href={url}>
         <img src={image} alt={name} />
         <Bottom>
           <Title>
