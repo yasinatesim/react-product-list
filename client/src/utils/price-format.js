@@ -16,5 +16,4 @@ const priceFormat = (price, currency = 'TRY') => {
   return splittedPrice;
 };
 
-
 export default priceFormat;
