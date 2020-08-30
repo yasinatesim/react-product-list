@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 // Utilities
@@ -22,7 +23,7 @@ function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked 
           </Title>
           <Price>{priceFormat(price)}</Price>
           <Cargo>
-            <Icon>{cargoType !== 3 && <CargoIcon width="22" fill="#3498db" />}</Icon>
+            <Icon>{cargoType !== 3 && <CargoIcon width="22" height="22" fill="#3498db" />}</Icon>
             <Text cargoType={cargoType}>{cargoName}</Text>
           </Cargo>
         </Bottom>
@@ -100,5 +101,16 @@ const Text = styled.span`
     margin-left: 0;
   }
 `;
+
+ProductItem.propTypes = {
+  id: PropTypes.number,
+  image: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.number,
+  url: PropTypes.string,
+  cargoType: PropTypes.number,
+  cargoName: PropTypes.string,
+  liked: PropTypes.bool,
+};
 
 export default ProductItem;

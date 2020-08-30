@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint . --fix"
   },
   "browserslist": {
     "production": [
@@ -32,9 +33,21 @@
       "last 1 safari version"
     ]
   },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.11.0",
+    "babel-eslint": "^10.1.0",
     "babel-preset-react-app": "^9.1.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
     "prettier": "^2.0.5"
   }
 }

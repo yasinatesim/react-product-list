@@ -32,7 +32,7 @@ export const ProductProvider = ({ children }) => {
     } else {
       setProducts(data.products);
     }
-  }, [data]);
+  }, [loading, data]);
 
   const toggleLike = ({ productId }) => {
     const _products = JSON.parse(JSON.stringify(products));

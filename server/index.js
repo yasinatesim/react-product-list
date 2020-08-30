@@ -39,5 +39,6 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers });
 
 server.listen().then(({ url }) => {
+  // eslint-disable-next-line
   console.log(`🚀 Server ready at ${url}`);
 });
