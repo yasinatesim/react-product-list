@@ -10,10 +10,11 @@ import ProductContext from '../../context/product';
 import ProductItem from './components/product-item';
 
 function ProductList() {
-  const { products } = useContext(ProductContext);
+  const { products, likedProducts } = useContext(ProductContext);
 
   return (
     <Container>
+      {likedProducts.length} ürün beğendin
       <Row>
         {products !== null
           ? products.map(({ id, name, image, price, url, cargo, liked }, index) => (

@@ -23,7 +23,8 @@ const PRODUCTS = gql`
 
 export const ProductProvider = ({ children }) => {
   const { loading, data } = useQuery(PRODUCTS);
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [likedProducts, setLikedProducts] = useState([]);
 
   useEffect(() => {
     if (loading || !data.products) {
@@ -36,11 +37,13 @@ export const ProductProvider = ({ children }) => {
   const toggleLike = ({ productId }) => {
     const _products = JSON.parse(JSON.stringify(products));
     _products[productId].liked = !_products[productId].liked;
-
     setProducts(_products);
+
+    const newlikedProducts =_products.filter((product) => product.liked);
+    setLikedProducts(newlikedProducts);
   };
 
-  const value = {products, toggleLike };
+  const value = { products, toggleLike, likedProducts };
 
   return <ProductContext.Provider value={value}>{children}</ProductContext.Provider>;
 };
