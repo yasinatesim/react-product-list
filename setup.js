@@ -1,36 +1,22 @@
 #!/usr/bin / env node
 /* eslint-disable */
-// const { exec } = require('child_process');
-// const fs = require('fs');
+const { exec } = require('child_process');
+const fs = require('fs');
 
-// function execute({ cwd }) {
-//   /**
-//    * Exists "node_modules" folder in the "cwd" directory, install the node dependencies
-//    */
-//   if (fs.existsSync('./server/node_modules') && fs.existsSync('./client/node_modules')) {
-//     run({ cwd });
-//     return;
-//   }
+function execute({ cwd }) {
+  exec('yarn', { cwd }, () => {
+    const process = exec('yarn start', { cwd });
+    process.stdout.on('data', (code) => {
+      console.log(code);
+    });
+  });
+}
 
-//   /**
-//    *  Else
-//    ** Install the node dependencies
-//    * -------------------------------------
-//    */
-//   exec('yarn', { cwd }, () => {
-//     run({ cwd });
-//   });
-// }
+// Main
+execute({ cwd: './' });
 
-// function run({ cwd }) {
-//   const process = exec('yarn start', { cwd });
-//   process.stdout.on('data', (code) => {
-//     console.log(code);
-//   });
-// }
+// Server
+execute({ cwd: './server' });
 
-// // Server
-// execute({ cwd: './server' });
-
-// // Client
-// execute({ cwd: './client' });
+// Client
+execute({ cwd: './client' });

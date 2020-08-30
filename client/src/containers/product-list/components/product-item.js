@@ -45,6 +45,11 @@ const Content = styled.a`
   border: 1px solid #d7dddb;
   border-radius: 4px;
   display: inline-block;
+
+  img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
 `;
 
 const Bottom = styled.div`
