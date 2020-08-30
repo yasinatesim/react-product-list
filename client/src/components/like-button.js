@@ -39,15 +39,6 @@ const Button = styled.button`
     transition: all 500ms;
   }
 
-  ${({ liked }) =>
-    liked &&
-    css`
-      border-color: #3498db;
-      svg {
-        fill: #3498db;
-      }
-    `}
-
   ${({ inCard }) =>
     inCard &&
     css`
@@ -62,6 +53,22 @@ const Button = styled.button`
       fill: #000;
     }
   }
+
+  ${({ liked }) =>
+    liked &&
+    css`
+      border-color: #3498db;
+      svg {
+        fill: #3498db;
+      }
+
+      &:hover {
+        border-color: #2980b9;
+        svg {
+          fill: #2980b9;
+        }
+      }
+    `}
 `;
 
 LikeButton.propTypes = {
