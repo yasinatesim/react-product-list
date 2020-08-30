@@ -1,6 +1,9 @@
 import React from 'react';
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+// Utilities
+import { priceFormat } from '../../../utils';
 
 // Icons
 import { CargoIcon } from '../../../icons';
@@ -14,12 +17,14 @@ function ProductItem({ image, name, price, url, cargoType, cargoName }) {
       <LikeButton inCard />
       <img src={image} alt={name} />
       <Bottom>
-        <Title>{name}</Title>
-        <Price>{price} TL</Price>
-        <span>
-          {cargoType !== 3 && <CargoIcon width="24" fill="#f00" />}
-          {cargoName}
-        </span>
+        <Title>
+          <span>{name}</span>
+        </Title>
+        <Price>{priceFormat(price)}</Price>
+        <Cargo>
+          <Icon>{cargoType !== 3 && <CargoIcon width="24" fill="#f00" />}</Icon>
+          <Text cargoType={cargoType}>{cargoName}</Text>
+        </Cargo>
       </Bottom>
     </Item>
   );
@@ -45,13 +50,50 @@ const Title = styled.h3`
   color: #000;
   margin-bottom: 12px;
   font-weight: 700;
-  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
 `;
 
 const Price = styled.p`
   font-size: 16px;
   color: #f00;
   font-weight: 700;
+`;
+
+const Icon = styled.span`
+  min-height: 30px;
+  display: inline-block;
+`;
+
+const Cargo = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+const Text = styled.span`
+  margin-left: 4px;
+
+  ${({ cargoType }) =>
+    cargoType === 3 &&
+    css`
+      margin-left: 0;
+    `}
+    @media (min-width: 768px) and (max-width: 992px) {
+      margin-left: 0;
+    }
 `;
 
 export default ProductItem;
