@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import React, { useContext, useState } from 'react';
 import styled, { css } from 'styled-components';
 
