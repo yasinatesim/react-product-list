@@ -6,14 +6,13 @@ import PropTypes from 'prop-types';
  * This function is basic title component
  * @param {Object} children - This is text in the Title component
  */
-function Title({children}) {
+function Title({ children }) {
   return (
     <StyledTitle>
       <h3>{children}</h3>
     </StyledTitle>
   );
 }
-
 
 /**
  * Styles
@@ -49,8 +48,7 @@ const StyledTitle = styled.div`
  * ------------
  */
 Title.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
-
 
 export default Title;

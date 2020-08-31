@@ -64,9 +64,9 @@ function ProductList() {
       : message;
   };
 
-/**
- * Liked Products Area
- */
+  /**
+   * Liked Products Area
+   */
   const renderLikedProducts = () => {
     return renderProductItem({
       condition: likedProducts.length > 0,
@@ -82,7 +82,7 @@ function ProductList() {
     return renderProductItem({
       condition: products !== null,
       array: products,
-      message: 'Loading'
+      message: 'Loading',
     });
   };
 
