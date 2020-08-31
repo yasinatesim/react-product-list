@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import styled, { css } from 'styled-components';
 
 // Utilities
-import { Container, Row, Column } from '../../styles/grid';
+import { Container, Column } from '../../styles/grid';
 
 // icons
 import { HeartIcon } from '../../icons';
@@ -89,7 +89,7 @@ function ProductList() {
         </Filter>
       </Header>
 
-      <Row>{showLikedProducts ? renderLikedProducts() : renderProducts()}</Row>
+      <Row hasLikedProducts={likedProducts.length > 0} showLikedProducts={showLikedProducts}>{showLikedProducts ? renderLikedProducts() : renderProducts()}</Row>
     </Container>
   );
 }
@@ -98,6 +98,20 @@ function ProductList() {
  * Styles
  * ------------
  */
+const Row = styled.div`
+  display: grid;
+  gap: 16px;
+  align-items: center;
+  grid-template-columns: repeat(12, 1fr);
+
+  ${({ showLikedProducts, hasLikedProducts }) =>
+    showLikedProducts &&
+    !hasLikedProducts &&
+    css`
+      grid-template-columns: repeat(1, 1fr);
+    `}
+`;
+
 const Header = styled.div`
   margin-top: 16px;
   margin-bottom: 16px;
