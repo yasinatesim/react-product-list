@@ -67,7 +67,7 @@ const Button = styled.button`
  */
 LikeButton.propTypes = {
   liked: PropTypes.bool,
-  productId: PropTypes.string,
+  productId: PropTypes.any,
 };
 
 export default LikeButton;

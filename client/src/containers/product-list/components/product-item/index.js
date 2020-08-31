@@ -141,12 +141,12 @@ const Text = styled.span`
  * ------------
  */
 ProductItem.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.any,
   image: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
   url: PropTypes.string,
-  cargoType: PropTypes.number,
+  cargoType: PropTypes.any,
   cargoName: PropTypes.string,
   liked: PropTypes.bool,
 };

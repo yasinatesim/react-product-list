@@ -26,4 +26,8 @@ describe('proice format helper', () => {
   test('string price without curremcy', () => {
     expect(priceFormat('767')).toBeTruthy();
   });
+
+  test('null price without curremcy', () => {
+    expect(priceFormat(null)).toBeTruthy();
+  });
 });

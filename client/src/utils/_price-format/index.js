@@ -7,7 +7,7 @@ const priceFormatHelper = (priceArray) => {
 };
 
 const priceFormat = (price, currency = 'TRY') => {
-  const splitPrice = price.toString().split('.');
+  const splitPrice = (String(price).split('.'));
   const splittedPrice = priceFormatHelper(splitPrice);
 
   if (currency === 'TRY') {
