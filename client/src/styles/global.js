@@ -27,6 +27,14 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
+  button {
+    outline: 0;
+    background-color: #fff;
+    padding: 8px;
+    user-select: none;
+    cursor: pointer;
+  }
 `;
 
 export default GlobalStyle;

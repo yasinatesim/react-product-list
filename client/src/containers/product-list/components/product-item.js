@@ -14,7 +14,7 @@ import LikeButton from '../../../components/like-button';
 function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked }) {
   return (
     <Item>
-      <LikeButton inCard liked={liked} productId={id} />
+      <LikeButton liked={liked} productId={id} />
       <Content href={url}>
         <img src={image} alt={name} />
         <Bottom>
@@ -39,10 +39,16 @@ function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked 
 
 const Item = styled.div`
   position: relative;
+  border: 1px solid #d7dddb;
+  transition: all 500ms;
+
+  &:hover {
+    box-shadow: 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    border-color: transparent;
+  }
 `;
 
 const Content = styled.a`
-  border: 1px solid #d7dddb;
   border-radius: 4px;
   display: inline-block;
 

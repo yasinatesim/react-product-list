@@ -1,5 +1,8 @@
 Hem server hem client’ın unit testleri yazılmalı en az %70 test coverage sağlanmalı.
 
+
+eslint düzeltilecek
+arayüz styling ve kod iyileştirmeleri yapılacak
 ------------------------
 
 [x]

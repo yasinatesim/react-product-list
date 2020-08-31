@@ -1,7 +1,11 @@
 import React, { useContext, useState } from 'react';
+import styled, { css } from 'styled-components';
 
 // Utilities
 import { Container, Row, Column } from '../../styles/grid';
+
+// icons
+import { HeartIcon } from '../../icons';
 
 // Context
 import ProductContext from '../../context/product';
@@ -29,7 +33,7 @@ function ProductList() {
   };
 
   const renderLikedProducts = () => {
-    return likedProducts.map(({ id, name, image, price, url, cargo, liked }) => (
+    return likedProducts.length > 0 ? likedProducts.map(({ id, name, image, price, url, cargo, liked }) => (
       <Column key={id}>
         <ProductItem
           name={name}
@@ -42,7 +46,7 @@ function ProductList() {
           id={id}
         />
       </Column>
-    ));
+    )) : 'Ürün beğenmediniz.';
   };
 
   const renderProducts = () => {
@@ -66,24 +70,50 @@ function ProductList() {
 
   return (
     <Container>
-      <div>{likedProducts.length} ürün beğendin</div>
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <button type="button" onClick={handleToggleLikedProducts}>
-        Beğendiklerim
-      </button>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <br/>
+      <Row>
+        <Column>
+          <Counter>
+            <HeartIcon fill="#3498db" />
+            <span>
+              <strong>{likedProducts.length}</strong> ürün
+            </span>
+          </Counter>
+        </Column>
+        <Column>
+          <Button showLikedProducts={showLikedProducts} type="button" onClick={handleToggleLikedProducts}>
+            Beğendiklerim
+          </Button>
+        </Column>
+      </Row>
+      <br/>
 
       <Row>{showLikedProducts ? renderLikedProducts() : renderProducts()}</Row>
     </Container>
   );
 }
+
+/**
+ * Styles
+ * ------------
+ */
+const Button = styled.button`
+  border-radius: 4px;
+
+  ${({ showLikedProducts }) =>
+    showLikedProducts &&
+    css`
+      border: 2px solid #3498db;
+      color: #3498db;
+    `}
+`;
+
+const Counter = styled.div`
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 4px;
+  }
+`;
 
 export default ProductList;
