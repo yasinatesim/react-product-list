@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "nodemon index.js",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "test": "jest",
+    "test:coverage": "jest --coverage --watchAll"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -14,6 +16,8 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
+    "graphql-tools": "^6.1.0",
+    "jest": "^26.4.2",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.5"
   },
