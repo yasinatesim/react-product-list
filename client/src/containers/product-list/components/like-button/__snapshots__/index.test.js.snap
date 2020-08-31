@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`like button component liked status 1`] = `
+<button
+  className="sc-AxjAm fqVtXk"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`like button component no children 1`] = `
+<button
+  className="sc-AxjAm dugjOI"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`like button component normal case 1`] = `
+<button
+  className="sc-AxjAm dugjOI"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`like button component with other component case 1`] = `
+<button
+  className="sc-AxjAm dugjOI"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`like button component with product id -> integer 1`] = `
+<button
+  className="sc-AxjAm dugjOI"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`like button component with product id -> string 1`] = `
+<button
+  className="sc-AxjAm dugjOI"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`like button component with product id status 1`] = `
+<button
+  className="sc-AxjAm fqVtXk"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`like button component with product id type of integer 1`] = `
+<button
+  className="sc-AxjAm dugjOI"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`like button component with product id type of string 1`] = `
+<button
+  className="sc-AxjAm dugjOI"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`title component liked status 1`] = `
+<button
+  className="sc-AxjAm fqVtXk"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`title component normal case 1`] = `
+<button
+  className="sc-AxjAm dugjOI"
+  onClick={[Function]}
+>
+  <svg
+    fill="#ccc"
+    height={24}
+    width={24}
+  >
+    <path
+      d="M7 3c-1.536 0-3.078.5-4.25 1.7-2.343 2.4-2.279 6.1 0 8.5L12 23l9.25-9.8c2.279-2.4 2.343-6.1 0-8.5-2.343-2.3-6.157-2.3-8.5 0l-.75.8-.75-.8C10.078 3.5 8.535 3 7 3z"
+    />
+  </svg>
+</button>
+`;

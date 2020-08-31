@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`button component no children 1`] = `
+<button
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`button component no trigger event 1`] = `
+<button
+  onClick={[Function]}
+  type="button"
+>
+  Text
+</button>
+`;
+
+exports[`button component normal case 1`] = `
+<button
+  onClick={[Function]}
+  type="button"
+>
+  Text
+</button>
+`;
+
+exports[`renders correctly 1`] = `
+<button
+  onClick={[Function]}
+  type="button"
+>
+  Text
+</button>
+`;

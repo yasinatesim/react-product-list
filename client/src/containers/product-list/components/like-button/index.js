@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 // Context
-import ProductContext from '../../../context/product';
+import ProductContext from '../../../../context/product';
 
 // icons
-import { HeartIcon } from '../../../icons';
+import { HeartIcon } from '../../../../icons';
 
 function LikeButton({ liked, productId }) {
   const { toggleLike } = useContext(ProductContext);

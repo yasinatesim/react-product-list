@@ -64,6 +64,16 @@ function ProductList() {
       : message;
   };
 
+  const renderNoResultLikedProducts = () => {
+    return (
+      <NotFound>
+        <p>
+          Herhani bir ürün beğenmediniz. Ürün beğenmek için lütfen <strong>Beğendiklerim</strong> butonuna tıklayın.
+        </p>
+      </NotFound>
+    );
+  };
+
   /**
    * Liked Products Area
    */
@@ -71,7 +81,7 @@ function ProductList() {
     return renderProductItem({
       condition: likedProducts.length > 0,
       array: likedProducts,
-      message: 'Ürün beğenmediniz',
+      message: renderNoResultLikedProducts(),
     });
   };
 
@@ -89,12 +99,12 @@ function ProductList() {
   return (
     <div className="container">
       <Header>
-        <Counter>
+        {likedProducts.length > 0 ? <Counter>
           <HeartIcon fill="#3498db" />
           <span>
             <strong>{likedProducts.length}</strong> ürün
           </span>
-        </Counter>
+        </Counter> : 'Ürün beğenmediniz'}
 
         <Title>İlginizi Çekebilecek Ürünler</Title>
 
@@ -169,6 +179,15 @@ const Counter = styled.div`
   span {
     margin-left: 8px;
   }
+`;
+
+const NotFound = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  height: 100px;
+  box-shadow: 0 3px 14px 2px rgba(0, 0, 0, 0.12);
 `;
 
 export default ProductList;

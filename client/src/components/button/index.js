@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
  * @param {Object} children   - This is text in the button
  * @param {Function} onClick  - This is onClick trigger
  */
-function Button({ children, onClick }) {
+function Button({ children, onClick = () => {} }) {
   return (
     <button type="button" onClick={onClick}>
       {children}

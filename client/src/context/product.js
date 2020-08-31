@@ -35,7 +35,7 @@ export const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     if (loading || !data.products) {
-      setProducts(null);
+      setProducts([]);
     } else {
       setProducts(data.products);
     }

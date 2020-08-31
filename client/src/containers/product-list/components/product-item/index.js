@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 // Utilities
-import { priceFormat } from '../../../utils';
+import { priceFormat } from '../../../../utils';
 
 // Icons
-import { CargoIcon } from '../../../icons';
+import { CargoIcon } from '../../../../icons';
 
 // Components
-import LikeButton from './like-button';
+import LikeButton from '../like-button';
 
 /**
  * This function is product item component
