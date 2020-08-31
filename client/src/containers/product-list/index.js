@@ -82,14 +82,16 @@ function ProductList() {
         <Title>
           <h3>İlginizi Çekebilecek Ürünler</h3>
         </Title>
-        <Filter>
-          <button showLikedProducts={showLikedProducts} type="button" onClick={handleToggleLikedProducts}>
+        <Filter showLikedProducts={showLikedProducts}>
+          <button type="button" onClick={handleToggleLikedProducts}>
             Beğendiklerim
           </button>
         </Filter>
       </Header>
 
-      <Row hasLikedProducts={likedProducts.length > 0} showLikedProducts={showLikedProducts}>{showLikedProducts ? renderLikedProducts() : renderProducts()}</Row>
+      <Row hasLikedProducts={likedProducts.length > 0} showLikedProducts={showLikedProducts}>
+        {showLikedProducts ? renderLikedProducts() : renderProducts()}
+      </Row>
     </Container>
   );
 }
@@ -168,9 +170,6 @@ const Filter = styled.div`
         color: #3498db;
       `}
   }
-
-  @media (min-width: 576px) {
-  }
 `;
 
 const Counter = styled.div`
@@ -179,9 +178,6 @@ const Counter = styled.div`
   grid-area: counter;
   span {
     margin-left: 8px;
-  }
-
-  @media (min-width: 576px) {
   }
 `;
 
