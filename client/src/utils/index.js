@@ -1,3 +1,3 @@
-import priceFormat from './price-format';
+import priceFormat from './_price-format';
 
 export { priceFormat };

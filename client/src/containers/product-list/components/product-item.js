@@ -9,8 +9,19 @@ import { priceFormat } from '../../../utils';
 import { CargoIcon } from '../../../icons';
 
 // Components
-import LikeButton from '../../../components/like-button';
+import LikeButton from './like-button';
 
+/**
+ * This function is product item component
+ * @params {String} id         - This is product id field
+ * @params {String} image      - This is product iamge field
+ * @params {String} name       - This is product name field
+ * @params {Number} price      - This is product price field
+ * @params {String} url        - This is product url field
+ * @params {Number} cargoType  - This is product cargo.type field
+ * @params {String} cargoName  - This is product cargo.name field
+ * @params {Boolean} liked     - This is product liked field
+ */
 function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked }) {
   return (
     <Item>
@@ -36,15 +47,27 @@ function ProductItem({ id, image, name, price, url, cargoType, cargoName, liked 
  * Styles
  * ------------
  */
-
 const Item = styled.div`
   position: relative;
   border: 1px solid #d7dddb;
   transition: all 500ms;
+  grid-column: span 12;
 
   &:hover {
     box-shadow: 0 3px 14px 2px rgba(0, 0, 0, 0.12);
     border-color: transparent;
+  }
+
+  @media (min-width: 576px) {
+    grid-column: span 6;
+  }
+
+  @media (min-width: 768px) {
+    grid-column: span 4;
+  }
+
+  @media (min-width: 1200px) {
+    grid-column: span 3;
   }
 `;
 
@@ -113,8 +136,12 @@ const Text = styled.span`
   }
 `;
 
+/**
+ * Props
+ * ------------
+ */
 ProductItem.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   image: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,

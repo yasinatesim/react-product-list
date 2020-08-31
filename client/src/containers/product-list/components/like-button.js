@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 // Context
-import ProductContext from '../context/product';
+import ProductContext from '../../../context/product';
 
 // icons
-import { HeartIcon } from '../icons';
+import { HeartIcon } from '../../../icons';
 
 function LikeButton({ liked, productId }) {
   const { toggleLike } = useContext(ProductContext);
@@ -47,20 +47,24 @@ const Button = styled.button`
   ${({ liked }) =>
     liked &&
     css`
-      border-color: #3498db;
+      border-color: #e74c3c;
       svg {
-        fill: #3498db;
+        fill: #e74c3c;
       }
 
       &:hover {
-        border-color: #2980b9;
+        border-color: #c0392b;
         svg {
-          fill: #2980b9;
+          fill: #c0392b;
         }
       }
     `}
 `;
 
+/**
+ * Props
+ * ------------
+ */
 LikeButton.propTypes = {
   liked: PropTypes.bool,
   productId: PropTypes.string,
