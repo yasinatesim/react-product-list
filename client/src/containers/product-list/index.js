@@ -187,8 +187,9 @@ const NotFound = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 40px;
-  height: 100px;
+  min-height: 100px;
   box-shadow: 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  padding: 16px;
 `;
 
 export default ProductList;
