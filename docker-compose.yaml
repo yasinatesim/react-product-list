@@ -1,0 +1,25 @@
+version: '3'
+services:
+  server:
+    build:
+      context: ./server/
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./server/:/usr/app/server
+      - /usr/app/server/node_modules
+    ports:
+      - "4000:4000"
+  client:
+    build:
+      context: ./client/
+    tty: true
+    stdin_open: true
+    command: yarn start
+    volumes:
+      - ./client/:/usr/app/client
+      - /usr/app/client/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
