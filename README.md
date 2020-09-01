@@ -10,11 +10,6 @@
 <hr>
 <p align="center">This project was created to create a medium / large React and Grphql project 😋</p>
 
-  <p align="center">
-    · <a href="https://react-product-list.yasinatesim.vercel.app/">View Demo</a>
-  </p>
-</p>
-
 ## 📖 About
 
 This project was created to create a medium / large React and Grphql project 😋
