@@ -8,11 +8,16 @@
   <br>
 </h3>
 <hr>
-<p align="center">This project was created to create a medium / large React and Grphql project 😋</p>
+<p align="center">This project was created to create a medium / large React and Graphql project 😋</p>
+
+  <p align="center">
+    · <a href="https://react-product-list.yasinatesim.vercel.app/">View Demo</a>
+    · <a href="https://yasinatesim-react-product-list.herokuapp.com/">View Graphql Playground</a>
+  </p>
 
 ## 📖 About
 
-This project was created to create a medium / large React and Grphql project 😋
+This project was created to create a medium / large React and Graphql project 😋
 
 ### 📚Tech Stack
 
@@ -25,9 +30,15 @@ This project was created to create a medium / large React and Grphql project �
 </tr>
 <tr>
 <td>
-<a  href="https://vuejs.org/">React Js</a>
+<a  href="https://reactjs.org/">React Js</a>
 </td>
 <td>A JavaScript library for building user interfaces</td>
+</tr>
+ <tr>
+<td>
+<a  href="https://graphql.org/">Graphql</a>
+</td>
+<td>A query language for your API</td>
 </tr>
 <tr>
 <td>
