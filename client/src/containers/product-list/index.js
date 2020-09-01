@@ -163,6 +163,7 @@ const Filter = styled.div`
   button {
     border-radius: 4px;
     font-weight: 700;
+    border: 2px solid #53605e;
 
     ${({ showLikedProducts }) =>
       showLikedProducts &&

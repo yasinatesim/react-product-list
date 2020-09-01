@@ -2,7 +2,7 @@
 
 <h3 align="center">
   <br>
-  <a href="https://github.com/yasinatesim/react-product-list"><img src="https://yasinates.com/tech/react.svg" alt="React Todo App" width="200"></a>
+  <a href="https://github.com/yasinatesim/react-product-list"><img src="https://yasinates.com/tech/react.svg" alt="React Product List App" width="200"></a>
   <br>
   React Product List App
   <br>
@@ -80,47 +80,52 @@ This project was created to create a medium / large React and Graphql project ðŸ
 git clone https://github.com/yasinatesim/react-product-list.git
 ```
 
+2. Add `.env` file
+```bash
+SERVER_URI='http://localhost:4000'
+```
+
 ### For Manual
 
-2. Change the directory
+3. Change the directory
 ```bash
 cd react-product-list
 ```
 
- 3. Install the project dependencies
+ 4. Install the project dependencies
 ```bash
 yarn install
 ```
 
-4. Change the `client` directory
+5. Change the `client` directory
 ```bash
 cd client
 ```
 
-5. Install the `client` dependencies
+6. Install the `client` dependencies
 ```bash
 yarn install
 ```
 
-6. Start the `client`
+7. Start the `client`
 
 ```bash
 yarn start
 ```
 
-7. Open the new terminal window
+8. Open the new terminal window
 
-8. Change the `server` directory
+9. Change the `server` directory
 ```bash
 cd ../server
 ```
 
-9. Install the `server` dependencies
+10. Install the `server` dependencies
 ```bash
 yarn install
 ```
 
-10. Start the `server`
+11. Start the `server`
 
 ```bash
 yarn start
@@ -128,13 +133,13 @@ yarn start
 
 ### For Docker
 
-2. Change the directory
+3. Change the directory
 
 ```bash
 cd react-product-list
 ```
 
-3. Run this command **without `yarn` or `yarn install`**
+4. Run this command **without `yarn` or `yarn install`**
 
 ```bash
 yarn setup
