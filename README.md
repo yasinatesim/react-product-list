@@ -81,35 +81,35 @@ cd react-product-list
 yarn install
 ```
 
-3. Change the `client` directory
+4. Change the `client` directory
 ```bash
 cd client
 ```
 
-4. Install the `client` dependencies
+5. Install the `client` dependencies
 ```bash
 yarn install
 ```
 
-4. Start the `client`
+6. Start the `client`
 
 ```bash
 yarn start
 ```
 
-5. Open the new terminal window
+7. Open the new terminal window
 
-6. Change the `server` directory
+8. Change the `server` directory
 ```bash
 cd ../server
 ```
 
-7. Install the `server` dependencies
+9. Install the `server` dependencies
 ```bash
 yarn install
 ```
 
-8. Start the `server`
+10. Start the `server`
 
 ```bash
 yarn start
