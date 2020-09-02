@@ -80,7 +80,7 @@ This project was created to create a medium / large React and Graphql project ðŸ
 git clone https://github.com/yasinatesim/react-product-list.git
 ```
 
-2. Add `.env` file
+2. Add `.env` file in the **client** folder
 ```bash
 SERVER_URI='http://localhost:4000'
 ```
