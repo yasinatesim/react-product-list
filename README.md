@@ -82,7 +82,7 @@ git clone https://github.com/yasinatesim/react-product-list.git
 
 2. Add `.env` file in the **client** folder
 ```bash
-SERVER_URI='http://localhost:4000'
+REACT_APP_API_URL='http://localhost:4000'
 ```
 
 ### For Manual
