@@ -12,7 +12,7 @@
 
   <p align="center">
     · <a href="https://react-product-list.yasinatesim.vercel.app/">View Demo</a>
-    · <a href="https://yasinatesim-react-product-list.herokuapp.com/">View Graphql Playground</a>
+    · <a href="https://react-product-list-server.yasinatesim.vercel.app/">View Graphql Playground</a>
   </p>
 
 ## 📖 About
