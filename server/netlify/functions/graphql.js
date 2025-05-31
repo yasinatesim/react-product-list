@@ -1,8 +1,8 @@
 const { ApolloServer, gql } = require('apollo-server-lambda');
 
 // Data
-const { products } = require('./src/data/products.json');
-const { cargo } = require('./src/data/cargo.json');
+const { products } = require('../../src/data/products.json');
+const { cargo } = require('../../src/data/cargo.json');
 
 const typeDefs = gql`
   type Product {

@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "lint": "eslint . --fix",
     "test": "jest",
-    "test:coverage": "jest --coverage --watchAll"
+    "test:coverage": "jest --coverage --watchAll",
+    "build": "echo 'No build step for Netlify functions'"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -24,6 +25,10 @@
   },
   "dependencies": {
     "apollo-server": "^2.17.0",
-    "graphql": "^15.3.0"
+    "apollo-server-lambda": "^3.12.0",
+    "graphql": "^16.6.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
