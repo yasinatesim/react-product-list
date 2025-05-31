@@ -39,8 +39,3 @@ const resolvers = {
 const server = new ApolloServer({ typeDefs, resolvers });
 
 exports.handler = server.createHandler();
-
-// server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
-//   // eslint-disable-next-line
-//   console.log(`🚀 Server ready at ${url}`);
-// });
