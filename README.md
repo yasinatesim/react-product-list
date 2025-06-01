@@ -11,8 +11,8 @@
 <p align="center">This project was created to create a medium / large React and Graphql project 😋</p>
 
   <p align="center">
-    · <a href="https://react-product-list.yasinatesim.vercel.app/">View Demo</a>
-    · <a href="https://react-product-list-server.yasinatesim.vercel.app/">View Graphql Playground</a>
+    · <a href="https://react-product-list.yasinates.com/">View Demo</a>
+    · <a href="https://react-product-list-server.yasinates.com/">View Graphql Playground</a>
   </p>
 
 ## 📖 About
