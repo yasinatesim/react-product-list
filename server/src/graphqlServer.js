@@ -39,7 +39,8 @@ function createApolloServer() {
     typeDefs,
     resolvers,
     introspection: true,
-    playground: true
+    playground: true,
+    uri: './netlify/functions/graphql',
   });
 }
 
