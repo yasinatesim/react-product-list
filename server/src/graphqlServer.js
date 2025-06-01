@@ -40,7 +40,6 @@ function createApolloServer() {
     resolvers,
     introspection: true,
     playground: true,
-    uri: './netlify/functions/graphql',
   });
 }
 
