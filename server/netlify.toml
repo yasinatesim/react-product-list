@@ -1,5 +1,10 @@
 [build]
   functions = "netlify/functions"
 
+[[redirects]]
+  from = "/"
+  to = "/.netlify/functions/graphql"
+  status = 200
+
 [dev]
   command = "npm start"
